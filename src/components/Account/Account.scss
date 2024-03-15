@@ -24,6 +24,7 @@
                 font-size: 1rem;
                 width: 300px;
                 color: #fff;
+                margin-bottom: 1em;
             }
 
             button{
@@ -37,10 +38,16 @@
                 cursor: pointer;
             }
 
+            :disabled{
+                background-color: #1bad3b48;
+                cursor: not-allowed;
+            }
+
             .form-group{
                 display: flex;
                 flex-direction: column;                                            
                 gap: .3em;
+                position: relative;
                 
                 label{
                     font-size: 0.825rem;
@@ -54,6 +61,11 @@
                 }
                 .input-error {
                     outline: 1px solid rgb(255, 72, 72);
+                }
+                span{
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
                 }
             }                        
         }
