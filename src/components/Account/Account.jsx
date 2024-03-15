@@ -1,5 +1,7 @@
 import { useState } from "react";
 import './Account.scss';
+import { isEmpty } from "lodash";
+
 
 export default function App() {
   const [userForm, setUserForm] = useState({
@@ -8,7 +10,7 @@ export default function App() {
     password: "",
   })
 
-  const [errors, setErros] = useState({
+  const [errors, setErrors] = useState({
     name: null,
     email: null,
     password: null,
@@ -93,7 +95,10 @@ export default function App() {
             <button onClick={handleSubmit}>Criar conta</button>
           </div>
         </div>
-        <div className="login"></div>
+        <div className="login">
+          <h1>Já possui uma conta ?</h1>
+   
+        </div>
       </div>
     </div>
   );
